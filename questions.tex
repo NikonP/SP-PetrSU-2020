@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage[english, russian]{babel}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{cancel}
+\usepackage{hyperref}
+\usepackage{geometry}
+
+\hypersetup{
+    hyperfootnotes=false,
+    colorlinks=true,
+    linkcolor = black,
+    filecolor=magenta,      
+    urlcolor=cyan
+}
+
+\footskip=50pt
+\geometry{bmargin = 80pt}
+
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{backgroundColour},   
+    commentstyle=\color{mGreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{mGray},
+    stringstyle=\color{mPurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+\begin{document}
+
+\vspace*{\fill}
+\tableofcontents
+\vspace*{\fill}
+\newpage
+% \begin{lstlisting}[style=CStyle]
+% #include <stdio.h>
+% int main(int argc, char* argv[])
+% {
+%    printf("Hello World!"); 
+% }
+% \end{lstlisting}
+
+\section{Обзор ОС UNIX: архитектура, вход в систему, файлы и каталоги, ввод и вывод.}
+\section{Обзор ОС UNIX: программы и процессы, обработка ошибок, идентификация пользователя.}
+\section{Обзор ОС UNIX: сигналы, представление времени, системные вызовы и библиотечные функции.}
+\section{Стандарты и реализации ОС UNIX: пределы ISO C, пределы POSIX, функции sysconf(), pathconf() и fpathconf(), элементарные системные типы данных.}
+\section{Файловый ввод-вывод: дескрипторы файлов, функция open(), функция creat(), функция close().}
+\section{Файловый ввод-вывод: Функция lseek(), функция read(), функция write()/}
+\section{Файловый ввод-вывод: эффективность операций ввода-вывода}
+\section{Файловый ввод-вывод: совместное использование файлов, атомарные операции, функции dup() и dup2()}
+\section{Файловый ввод-вывод: функции sync(), fsync(), fdatasync(), fcntl(), ioctl(), /dev/fd}
+\section{Файлы и каталоги: функции stat(), fstat(), lstat(), содержимое struct stat.}
+\section{Файлы и каталоги: типы файлов, права доступа к файлу, функция umask().}
+\section{Файлы и каталоги: функции chmod(), fchmod(), chown(), fchown(), lchown().}
+\section{Файлы и каталоги: размер файла, дырки в файлах, усечение файлов, файловые системы, функции link(), unlink(), remove(), rename().}
+\section{Файлы и каталоги: символические ссылки, функции symlink() и readlink().}
+\section{Файлы и каталоги: временные характеристики файлов, функция utime().}
+\section{Файлы и каталоги: функции mkdir() и rmdir(), чтение каталогов, функции chdir(), fchdir(), getcwd().}
+\section{Стандартная библиотека ввода-вывода: потоки и объекты FILE, стандартные потоки ввода, вывода и сообщений об ошибках, буферизация.}
+\section{Стандартная библиотека ввода-вывода: открытие потока, чтение из потока и запись в поток, функции ввода, функции вывода.}
+\section{Стандартная библиотека ввода-вывода: эффективность стандартных операций ввода-вывода, позиционирование в потоке.}
+\section{Стандартная библиотека ввода-вывода: форматированный вывод, форматированный ввод, временные файлы.}
+\section{Управление процессами: идентификаторы процесса, функция fork(), совместное использование файлов.}
+\section{Управление процессами: функция exit(), функции wait() и waitpid().}
+\section{Управление процессами: семейство функций exec().}
+\section{Управление процессами: изменение идентификаторов пользователя и группы, функции setuid(), setgid(), seteuid(), setegid().}
+\section{Управление процессами: интерпретируемые файлы, функция system().}
+\section{Сигналы: концепция сигналов, функция signal(), ненадежные сигналы.}
+\section{Сигналы: прерванные системные вызовы, реентерабельные функции.}
+\section{Сигналы: функции kill(), raise(), alarm(), pause().}
+\section{Сигналы: надежные сигналы, терминология и семантика, наборы сигналов.}
+\section{Сигналы: маска сигналов процесса и функция sigprocmask(), функция sigpending(),}
+\section{Сигналы: функция sigaction().}
+\section{Сигналы: функция sigsuspend().}
+\end{document} 
