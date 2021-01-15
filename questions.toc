@@ -1,33 +1,52 @@
 \babel@toc {russian}{}
 \contentsline {section}{\numberline {1}Обзор ОС UNIX: архитектура, вход в систему, файлы и каталоги, ввод и вывод.}{4}{section.1}%
-\contentsline {section}{\numberline {2}Обзор ОС UNIX: программы и процессы, обработка ошибок, идентификация пользователя.}{4}{section.2}%
-\contentsline {section}{\numberline {3}Обзор ОС UNIX: сигналы, представление времени, системные вызовы и библиотечные функции.}{4}{section.3}%
-\contentsline {section}{\numberline {4}Стандарты и реализации ОС UNIX: пределы ISO C, пределы POSIX, функции sysconf(), pathconf() и fpathconf(), элементарные системные типы данных.}{4}{section.4}%
-\contentsline {section}{\numberline {5}Файловый ввод-вывод: дескрипторы файлов, функция open(), функция creat(), функция close().}{4}{section.5}%
-\contentsline {section}{\numberline {6}Файловый ввод-вывод: Функция lseek(), функция read(), функция write()/}{4}{section.6}%
-\contentsline {section}{\numberline {7}Файловый ввод-вывод: эффективность операций ввода-вывода}{4}{section.7}%
-\contentsline {section}{\numberline {8}Файловый ввод-вывод: совместное использование файлов, атомарные операции, функции dup() и dup2()}{4}{section.8}%
-\contentsline {section}{\numberline {9}Файловый ввод-вывод: функции sync(), fsync(), fdatasync(), fcntl(), ioctl(), /dev/fd}{4}{section.9}%
-\contentsline {section}{\numberline {10}Файлы и каталоги: функции stat(), fstat(), lstat(), содержимое struct stat.}{4}{section.10}%
-\contentsline {section}{\numberline {11}Файлы и каталоги: типы файлов, права доступа к файлу, функция umask().}{4}{section.11}%
-\contentsline {section}{\numberline {12}Файлы и каталоги: функции chmod(), fchmod(), chown(), fchown(), lchown().}{4}{section.12}%
-\contentsline {section}{\numberline {13}Файлы и каталоги: размер файла, дырки в файлах, усечение файлов, файловые системы, функции link(), unlink(), remove(), rename().}{4}{section.13}%
-\contentsline {section}{\numberline {14}Файлы и каталоги: символические ссылки, функции symlink() и readlink().}{4}{section.14}%
-\contentsline {section}{\numberline {15}Файлы и каталоги: временные характеристики файлов, функция utime().}{6}{section.15}%
-\contentsline {section}{\numberline {16}Файлы и каталоги: функции mkdir() и rmdir(), чтение каталогов, функции chdir(), fchdir(), getcwd().}{6}{section.16}%
-\contentsline {section}{\numberline {17}Стандартная библиотека ввода-вывода: потоки и объекты FILE, стандартные потоки ввода, вывода и сообщений об ошибках, буферизация.}{6}{section.17}%
-\contentsline {section}{\numberline {18}Стандартная библиотека ввода-вывода: открытие потока, чтение из потока и запись в поток, функции ввода, функции вывода.}{6}{section.18}%
-\contentsline {section}{\numberline {19}Стандартная библиотека ввода-вывода: эффективность стандартных операций ввода-вывода, позиционирование в потоке.}{6}{section.19}%
-\contentsline {section}{\numberline {20}Стандартная библиотека ввода-вывода: форматированный вывод, форматированный ввод, временные файлы.}{6}{section.20}%
-\contentsline {section}{\numberline {21}Управление процессами: идентификаторы процесса, функция fork(), совместное использование файлов.}{6}{section.21}%
-\contentsline {section}{\numberline {22}Управление процессами: функция exit(), функции wait() и waitpid().}{6}{section.22}%
-\contentsline {section}{\numberline {23}Управление процессами: семейство функций exec().}{6}{section.23}%
-\contentsline {section}{\numberline {24}Управление процессами: изменение идентификаторов пользователя и группы, функции setuid(), setgid(), seteuid(), setegid().}{6}{section.24}%
-\contentsline {section}{\numberline {25}Управление процессами: интерпретируемые файлы, функция system().}{6}{section.25}%
-\contentsline {section}{\numberline {26}Сигналы: концепция сигналов, функция signal(), ненадежные сигналы.}{6}{section.26}%
-\contentsline {section}{\numberline {27}Сигналы: прерванные системные вызовы, реентерабельные функции.}{6}{section.27}%
-\contentsline {section}{\numberline {28}Сигналы: функции kill(), raise(), alarm(), pause().}{6}{section.28}%
-\contentsline {section}{\numberline {29}Сигналы: надежные сигналы, терминология и семантика, наборы сигналов.}{6}{section.29}%
-\contentsline {section}{\numberline {30}Сигналы: маска сигналов процесса и функция sigprocmask(), функция sigpending(),}{6}{section.30}%
-\contentsline {section}{\numberline {31}Сигналы: функция sigaction().}{6}{section.31}%
-\contentsline {section}{\numberline {32}Сигналы: функция sigsuspend().}{6}{section.32}%
+\contentsline {subsection}{\numberline {1.1}Архитектура UNIX}{4}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Определение ОС}{4}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Интерфес ядра}{4}{subsubsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.3}Коммандая оболочка}{4}{subsubsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.4}Обобщение}{4}{subsubsection.1.1.4}%
+\contentsline {subsubsection}{\numberline {1.1.5}Linux}{4}{subsubsection.1.1.5}%
+\contentsline {subsubsection}{\numberline {1.1.6}Схема, отражающая структуру UNIX}{5}{subsubsection.1.1.6}%
+\contentsline {subsection}{\numberline {1.2}Вход в систему}{5}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Файлы и каталоги}{5}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Файловая система}{5}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Имя файла}{6}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}Путь к файлу}{6}{subsubsection.1.3.3}%
+\contentsline {subsubsection}{\numberline {1.3.4}Рабочий каталог}{6}{subsubsection.1.3.4}%
+\contentsline {subsubsection}{\numberline {1.3.5}Домашний каталог}{6}{subsubsection.1.3.5}%
+\contentsline {subsection}{\numberline {1.4}Ввод и вывод}{7}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Дескрипторы файлов}{7}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.2}Стандартный ввод, стандартный вывод,Cтандартный вывод сообщений об ошибках}{7}{subsubsection.1.4.2}%
+\contentsline {subsubsection}{\numberline {1.4.3}Небуферизованный ввод-вывод}{7}{subsubsection.1.4.3}%
+\contentsline {subsubsection}{\numberline {1.4.4}Стандартные функции ввода-вывода}{7}{subsubsection.1.4.4}%
+\contentsline {section}{\numberline {2}Обзор ОС UNIX: программы и процессы, обработка ошибок, идентификация пользователя.}{8}{section.2}%
+\contentsline {section}{\numberline {3}Обзор ОС UNIX: сигналы, представление времени, системные вызовы и библиотечные функции.}{10}{section.3}%
+\contentsline {section}{\numberline {4}Стандарты и реализации ОС UNIX: пределы ISO C, пределы POSIX, функции sysconf(), pathconf() и fpathconf(), элементарные системные типы данных.}{10}{section.4}%
+\contentsline {section}{\numberline {5}Файловый ввод-вывод: дескрипторы файлов, функция open(), функция creat(), функция close().}{10}{section.5}%
+\contentsline {section}{\numberline {6}Файловый ввод-вывод: Функция lseek(), функция read(), функция write()/}{10}{section.6}%
+\contentsline {section}{\numberline {7}Файловый ввод-вывод: эффективность операций ввода-вывода}{10}{section.7}%
+\contentsline {section}{\numberline {8}Файловый ввод-вывод: совместное использование файлов, атомарные операции, функции dup() и dup2()}{10}{section.8}%
+\contentsline {section}{\numberline {9}Файловый ввод-вывод: функции sync(), fsync(), fdatasync(), fcntl(), ioctl(), /dev/fd}{10}{section.9}%
+\contentsline {section}{\numberline {10}Файлы и каталоги: функции stat(), fstat(), lstat(), содержимое struct stat.}{10}{section.10}%
+\contentsline {section}{\numberline {11}Файлы и каталоги: типы файлов, права доступа к файлу, функция umask().}{10}{section.11}%
+\contentsline {section}{\numberline {12}Файлы и каталоги: функции chmod(), fchmod(), chown(), fchown(), lchown().}{10}{section.12}%
+\contentsline {section}{\numberline {13}Файлы и каталоги: размер файла, дырки в файлах, усечение файлов, файловые системы, функции link(), unlink(), remove(), rename().}{10}{section.13}%
+\contentsline {section}{\numberline {14}Файлы и каталоги: символические ссылки, функции symlink() и readlink().}{10}{section.14}%
+\contentsline {section}{\numberline {15}Файлы и каталоги: временные характеристики файлов, функция utime().}{12}{section.15}%
+\contentsline {section}{\numberline {16}Файлы и каталоги: функции mkdir() и rmdir(), чтение каталогов, функции chdir(), fchdir(), getcwd().}{12}{section.16}%
+\contentsline {section}{\numberline {17}Стандартная библиотека ввода-вывода: потоки и объекты FILE, стандартные потоки ввода, вывода и сообщений об ошибках, буферизация.}{12}{section.17}%
+\contentsline {section}{\numberline {18}Стандартная библиотека ввода-вывода: открытие потока, чтение из потока и запись в поток, функции ввода, функции вывода.}{12}{section.18}%
+\contentsline {section}{\numberline {19}Стандартная библиотека ввода-вывода: эффективность стандартных операций ввода-вывода, позиционирование в потоке.}{12}{section.19}%
+\contentsline {section}{\numberline {20}Стандартная библиотека ввода-вывода: форматированный вывод, форматированный ввод, временные файлы.}{12}{section.20}%
+\contentsline {section}{\numberline {21}Управление процессами: идентификаторы процесса, функция fork(), совместное использование файлов.}{12}{section.21}%
+\contentsline {section}{\numberline {22}Управление процессами: функция exit(), функции wait() и waitpid().}{12}{section.22}%
+\contentsline {section}{\numberline {23}Управление процессами: семейство функций exec().}{12}{section.23}%
+\contentsline {section}{\numberline {24}Управление процессами: изменение идентификаторов пользователя и группы, функции setuid(), setgid(), seteuid(), setegid().}{12}{section.24}%
+\contentsline {section}{\numberline {25}Управление процессами: интерпретируемые файлы, функция system().}{12}{section.25}%
+\contentsline {section}{\numberline {26}Сигналы: концепция сигналов, функция signal(), ненадежные сигналы.}{12}{section.26}%
+\contentsline {section}{\numberline {27}Сигналы: прерванные системные вызовы, реентерабельные функции.}{12}{section.27}%
+\contentsline {section}{\numberline {28}Сигналы: функции kill(), raise(), alarm(), pause().}{12}{section.28}%
+\contentsline {section}{\numberline {29}Сигналы: надежные сигналы, терминология и семантика, наборы сигналов.}{12}{section.29}%
+\contentsline {section}{\numberline {30}Сигналы: маска сигналов процесса и функция sigprocmask(), функция sigpending(),}{12}{section.30}%
+\contentsline {section}{\numberline {31}Сигналы: функция sigaction().}{12}{section.31}%
+\contentsline {section}{\numberline {32}Сигналы: функция sigsuspend().}{12}{section.32}%
