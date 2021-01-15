@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.6)  15 JAN 2021 15:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.6)  15 JAN 2021 15:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -555,17 +555,17 @@ Overfull \hbox (34.12096pt too wide) in paragraph at lines 31--31
 )
 \tf@toc=\write4
  [2]
-Overfull \hbox (0.96053pt too wide) in paragraph at lines 62--62
+Overfull \hbox (0.96053pt too wide) in paragraph at lines 64--64
 []\T2A/cmr/bx/n/14.4 ќбзор ќ— UNIX: про-грам-мы и про-цес-сы, об-ра-бот-ка оши-
  []
 
 
-Overfull \hbox (18.0726pt too wide) in paragraph at lines 69--69
+Overfull \hbox (18.0726pt too wide) in paragraph at lines 71--71
 []\T2A/cmr/bx/n/14.4 ‘айловый ввод-вывод: функ-ции sync(), fsync(), fdatasync(),
  []
 
 
-Overfull \hbox (3.97362pt too wide) in paragraph at lines 72--72
+Overfull \hbox (3.97362pt too wide) in paragraph at lines 74--74
 []\T2A/cmr/bx/n/14.4 ‘айлы и ка-та-ло-ги: функ-ции chmod(), fchmod(), chown(),
  []
 
@@ -573,32 +573,32 @@ Overfull \hbox (3.97362pt too wide) in paragraph at lines 72--72
 Overfull \vbox (51.03242pt too high) has occurred while \output is active []
 
  [4]
-Overfull \hbox (23.56529pt too wide) in paragraph at lines 82--82
+Overfull \hbox (23.56529pt too wide) in paragraph at lines 84--84
 []\T2A/cmr/bx/n/14.4 ”правление про-цес-са-ми: иден-ти-фи-ка-то-ры про-цес-са, функ-
  []
 
 
-Overfull \hbox (6.22543pt too wide) in paragraph at lines 83--83
+Overfull \hbox (6.22543pt too wide) in paragraph at lines 85--85
 []\T2A/cmr/bx/n/14.4 ”правление про-цес-са-ми: функ-ци€ exit(), функ-ции wait()
  []
 
 
-Overfull \hbox (31.00954pt too wide) in paragraph at lines 85--85
+Overfull \hbox (31.00954pt too wide) in paragraph at lines 87--87
 \T2A/cmr/bx/n/14.4 поль-зо-ва-те-л€ и груп-пы, функ-ции setuid(), setgid(), seteuid(),
  []
 
 
-Overfull \hbox (21.6902pt too wide) in paragraph at lines 86--86
+Overfull \hbox (21.6902pt too wide) in paragraph at lines 88--88
 []\T2A/cmr/bx/n/14.4 ”правление про-цес-са-ми: ин-тер-пре-ти-ру-е-мые фай-лы, функ-
  []
 
 
-Overfull \hbox (3.96596pt too wide) in paragraph at lines 88--88
+Overfull \hbox (3.96596pt too wide) in paragraph at lines 90--90
 []\T2A/cmr/bx/n/14.4 —игналы: пре-рван-ные си-стем-ные вы-зо-вы, ре-ен-те-ра-бель-
  []
 
 
-Overfull \hbox (35.15337pt too wide) in paragraph at lines 91--91
+Overfull \hbox (35.15337pt too wide) in paragraph at lines 93--93
 []\T2A/cmr/bx/n/14.4 —игналы: мас-ка сиг-на-лов про-цес-са и функ-ци€ sigprocmask(),
  []
 
