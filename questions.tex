@@ -468,7 +468,31 @@ int main()
 \subsubsection{Добавление данных в конец файла}
 ОС UNIX выполняет операцию \code{write} атомарно (только один процесс может получить доступ), если указан флаг \code{O\_APPEND}.
 \subsubsection{Функции pread и pwrite}
-
+\code{pread} и \code{pwrite} -- это расширения XSI для стандарта Single UNIX Specification. Эти расширения позволяют процессам атомарно выполнять ввода/вывода.\\
+\begin{lstlisting}[style=CStyle]
+#include <unistd.h>
+ssize_t pread(int fd, void *buf, size_t nbytes, off_t offset);
+ssize_t pwrite(int fd, const void *buf, size_t nbytes, off_t offset);    
+\end{lstlisting}
+Вызов функции pread эквивалентен двум последовательным вызовам функций \code{lseek} и \code{read} со следующими отличиями:
+\begin{itemize}
+    \item При использовании pread нет возможности прервать выполнение этих двух операций
+    \item Значение текущей позиции в файле не изменяется    
+\end{itemize}
+Вызов функции pwrite эквивалентен двум последовательным вызовам функций \code{lseek} и \code{read} с аналогичными отличиями.
+\subsubsection{Создание файла}
+При указании флага \code{O\_CREAT} функция \code{open()} будет атомарно проверять существование и создавать файл.\\
+\subsection{Функции dup и dup2}
+Дубликат дескриптора существующего файла можно создать с помощью одной из следующих функций:
+\begin{lstlisting}[style=CStyle]
+#include <unistd.h>
+int dup(int fd);
+int dup2(int fd, int fd2);    
+\end{lstlisting}
+Возвращают новый дескриптор файла или –1 — в случае ошибки.\\
+Функция dup гарантирует, что возвращаемый ею новый файловый дескриптор будет иметь наименьшее возможное значение.\\
+Вызывая функцию dup2, мы указываем значение нового дескриптора в аргументе fd2. Если дескриптор fd2 перед вызовом функции уже был открыт, он предварительно закрывается.\\
+Если значения аргументов fd и fd2 равны, функция dup2 вернет дескриптор fd2, не закрывая его.
 
 \section{Файловый ввод-вывод: функции sync(), fsync(), fdatasync(), fcntl(), ioctl(), /dev/fd}
 \section{Файлы и каталоги: функции stat(), fstat(), lstat(), содержимое struct stat.}
