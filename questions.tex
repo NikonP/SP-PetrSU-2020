@@ -28,7 +28,7 @@
     backgroundcolor=\color{backgroundColour},   
     commentstyle=\color{mGreen},
     keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{mGray},
+    numberstyle=\tiny\color{mGreen},
     stringstyle=\color{mPurple},
     basicstyle=\footnotesize,
     breakatwhitespace=false,         
@@ -40,7 +40,7 @@
     showspaces=false,                
     showstringspaces=false,
     showtabs=false,                  
-    tabsize=2,
+    tabsize=4,
     language=C
 }
 
@@ -376,7 +376,44 @@ int close(int fd);
 \end{lstlisting}
 Закрытие файла приводит также к снятию любых блокировок, которые могли быть наложены процессом. При завершении процесса все открытые им файлы автоматически закрываются ядром.
 
-\section{Файловый ввод-вывод: Функция lseek(), функция read(), функция write()/}
+\section{Файловый ввод-вывод: Функция lseek(), функция read(), функция write()}
+\subsection{Функция lseek}
+С любым открытым файлом связано такое понятие, как текущая позиция в файле. Как правило, это неотрицательное целое число, которым выражается смещение в байтах от начала файла. По умолчанию при открытии файла текущая позиция инициализируется числом 0, если не был установлен флаг \code{O\_APPEND}.
+Явное изменение текущей позиции в файле выполняется с помощью функции lseek.
+\begin{lstlisting}[style=CStyle]
+#include <unistd.h>
+off_t lseek(int fd, off_t offset, int whence);    
+\end{lstlisting}
+Интерпретация аргумента \code{offset} зависит от значения аргумента \code{whence}:
+\begin{itemize}
+    \item \code{SEEK\_SET} -- offset интерпретируется как смещение от начала файла
+    \item \code{SEEK\_CUR} -- offset интерпретируется как смещение от текущей позиции в файле. В этом случае offset может принимать и положительные, и отрицательные значения. 
+    \item \code{SEEK\_END} -- offset интерпретируется как смещение от конца файла. В этом случае offset может принимать и положительные, и отрицательные значения
+\end{itemize}
+Поскольку в случае успеха функция lseek возвращает новую текущую позицию в файле, в аргументе offset можно передать 0, чтобы узнать текущую позицию:
+\begin{lstlisting}[style=CStyle]
+off_t currpos;
+currpos = lseek(fd, 0, SEEK_CUR);
+\end{lstlisting}
+Таким же способом можно определить, поддерживается ли свободное перемещение текущей позиции файла.
+
+\subsection{Функция read}
+Чтение данных из открытого файла производится функцией read.
+\begin{lstlisting}[style=CStyle]
+#include <unistd.h>
+ssize_t read(int fd, void *buf, size_t nbytes);
+\end{lstlisting}
+Возвращает количество прочитанных байтов, 0 -- если достигнут конец файла, -1 -- в случае ошибки.
+
+\subsection{Функция write}
+Запись данных в открытый файл производится функцией write.
+\begin{lstlisting}[style=CStyle]
+#include <unistd.h>
+#include <unistd.h>
+ssize_t write(int fd, const void *buf, size_t nbytes);
+\end{lstlisting}
+Возвращает количество записанных байтов в случае успеха, -1 -- в случае ошибки.
+
 
 \section{Файловый ввод-вывод: эффективность операций ввода-вывода}
 \section{Файловый ввод-вывод: совместное использование файлов, атомарные операции, функции dup() и dup2()}
