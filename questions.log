@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.6)  15 JAN 2021 20:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2021.1.2)  16 JAN 2021 17:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/n1k0np/univer/sys_prog/SP-PetrSU-2020/questions.tex
-(/home/n1k0np/univer/sys_prog/SP-PetrSU-2020/questions.tex
+**/home/n1k0n/univer/sys-prog/SP-PetrSU-2020/questions.tex
+(/home/n1k0n/univer/sys-prog/SP-PetrSU-2020/questions.tex
 LaTeX2e <2020-10-01> patch level 2
 L3 programming layer <2020-12-03> xparse <2020-03-03> (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
@@ -444,7 +444,7 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 17.
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 \l__kernel_color_stack_int=\count274
 \l__pdf_internal_box=\box49
-) (/home/n1k0np/univer/sys_prog/SP-PetrSU-2020/questions.aux
+) (/home/n1k0n/univer/sys-prog/SP-PetrSU-2020/questions.aux
 LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 22.
  (/usr/share/texmf-dist/tex/latex/cyrillic/t2acmr.fd
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
@@ -503,7 +503,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 50.
 LaTeX Info: Redefining \pageref on input line 50.
 LaTeX Info: Redefining \nameref on input line 50.
- (/home/n1k0np/univer/sys_prog/SP-PetrSU-2020/questions.out) (/home/n1k0np/univer/sys_prog/SP-PetrSU-2020/questions.out)
+ (/home/n1k0n/univer/sys-prog/SP-PetrSU-2020/questions.out) (/home/n1k0n/univer/sys-prog/SP-PetrSU-2020/questions.out)
 \@outlinefile=\write3
 
 *geometry* driver: auto-detecting
@@ -540,7 +540,7 @@ LaTeX Info: Redefining \nameref on input line 50.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/home/n1k0np/univer/sys_prog/SP-PetrSU-2020/questions.toc
+(/home/n1k0n/univer/sys-prog/SP-PetrSU-2020/questions.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -550,53 +550,53 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (10.38786pt too wide) in paragraph at lines 44--44
+Overfull \hbox (10.38786pt too wide) in paragraph at lines 57--57
  [] [][][]\T2A/cmr/bx/n/12 Файловый ввод-вывод: функ-ции sync(), fsync(), fdatasync(), fcntl(), 
  []
 
 
-Overfull \hbox (6.2472pt too wide) in paragraph at lines 47--47
+Overfull \hbox (6.2472pt too wide) in paragraph at lines 60--60
  [] [][][]\T2A/cmr/bx/n/12 Файлы и ка-та-ло-ги: функ-ции chmod(), fchmod(), chown(), fchown(), 
  []
 
 [2]
-Overfull \hbox (4.7752pt too wide) in paragraph at lines 54--54
+Overfull \hbox (4.7752pt too wide) in paragraph at lines 67--67
  [] [][][]\T2A/cmr/bx/n/12 Стандартная биб-лио-те-ка ввода-вывода: эф-фек-тив-ность стан-дарт- 
  []
 
 
-Overfull \hbox (23.1388pt too wide) in paragraph at lines 56--56
+Overfull \hbox (23.1388pt too wide) in paragraph at lines 69--69
  [] [][][]\T2A/cmr/bx/n/12 Управление про-цес-са-ми: иден-ти-фи-ка-то-ры про-цес-са, функ-ция fork(), 
  []
 
 
-Overfull \hbox (24.27469pt too wide) in paragraph at lines 57--57
+Overfull \hbox (24.27469pt too wide) in paragraph at lines 70--70
  [] [][][]\T2A/cmr/bx/n/12 Управление про-цес-са-ми: функ-ция exit(), функ-ции wait() и waitpid().[][] []  
  []
 
 
-Overfull \hbox (41.39958pt too wide) in paragraph at lines 60--60
+Overfull \hbox (41.39958pt too wide) in paragraph at lines 73--73
  [] [][][]\T2A/cmr/bx/n/12 Управление про-цес-са-ми: ин-тер-пре-ти-ру-е-мые фай-лы, функ-ция system().[][] []  
  []
 
 
-Overfull \hbox (7.32317pt too wide) in paragraph at lines 62--62
+Overfull \hbox (7.32317pt too wide) in paragraph at lines 75--75
  [] [][][]\T2A/cmr/bx/n/12 Сигналы: пре-рван-ные си-стем-ные вы-зо-вы, ре-ен-те-ра-бель-ные функ- 
  []
 
-)
+[3])
 \tf@toc=\write4
- [3]
+ [4]
 Overfull \hbox (3.16548pt too wide) in paragraph at lines 69--70
 \T2A/cmr/m/n/12 Операционная си-сте-ма (ОС) -- это про-грамм-ное обес-пе-че-ние (ПО), ко-то-рое управ-
  []
 
-<./images//unix.png, id=382, 266.9975pt x 265.99374pt>
+<./images//unix.png, id=451, 266.9975pt x 265.99374pt>
 File: ./images//unix.png Graphic file (type png)
 <use ./images//unix.png>
 Package pdftex.def Info: ./images//unix.png  used on input line 79.
 (pdftex.def)             Requested size: 186.89696pt x 186.19434pt.
-[4]
+[5]
 LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 81.
  (/usr/share/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
@@ -605,12 +605,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--86
 
  []
 
-[5 </home/n1k0np/univer/sys_prog/SP-PetrSU-2020/./images//unix.png>]
+[6 </home/n1k0n/univer/sys-prog/SP-PetrSU-2020/./images//unix.png>]
 Overfull \hbox (10.91486pt too wide) in paragraph at lines 91--93
 \T2A/cmr/m/n/12 Для по-лу-че-ния ат-ри-бу-тов фай-ла ис-поль-зу-ют-ся функ-ции [][][][][][] и [][][][][][]. 
  []
 
-[6]
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 108--111
 
  []
@@ -635,17 +635,17 @@ Overfull \hbox (8.71387pt too wide) in paragraph at lines 117--120
 \T2A/cmr/m/n/12 к функ-ци-ям небу-фе-ри-зо-ван-но-го ввода-вывода. Ис-поль-зо-ва-ние стан-дарт-ных функ-
  []
 
-[7]
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 140--144
 
  []
 
-[8]
+[9]
 Overfull \hbox (1.32982pt too wide) in paragraph at lines 155--158
 \T2A/cmr/m/n/12 Пользователь с иден-ти-фи-ка-то-ром [][][][][][] на-зы-ва-ет-ся су-пер-поль-зо-ва-те-лем, или [][][][][][].
  []
 
-[9] [10]
+[10] [11]
 Overfull \hbox (22.26682pt too wide) in paragraph at lines 178--179
 \T2A/cmr/m/n/12 ме-ря-ет ре-сур-сы цен-траль-но-го про-цес-со-ра, ис-поль-зо-ван-ные про-цес-сом.Значения
  []
@@ -655,7 +655,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 189--194
 
  []
 
-[11]
+[12]
 Overfull \hbox (47.05453pt too wide) in paragraph at lines 195--195
 \T2A/cmr/bx/n/17.28 ISO C, пре-де-лы POSIX, функ-ции sysconf(), pathconf()
  []
@@ -666,123 +666,150 @@ Overfull \hbox (12.09618pt too wide) in paragraph at lines 195--195
  []
 
 
-Overfull \hbox (33.15596pt too wide) in paragraph at lines 196--196
+Underfull \hbox (badness 10000) in paragraph at lines 198--201
+
+ []
+
+[13]
+Overfull \hbox (2.68973pt too wide) in paragraph at lines 228--231
+\T2A/cmr/m/n/12 of Electrical and Electronics Engineers). POSIX (Portable Operating System Interface
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--231
+
+ []
+
+
+Overfull \hbox (21.7496pt too wide) in paragraph at lines 232--234
+\T2A/cmr/m/n/12 воз-мож-но-сти, предо-став-ля-е-мые ба-зо-вой спе-ци-фи-ка-ци-ей POSIX.1. Стан-дарт POSIX.1
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--234
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 238--239
+
+ []
+
+[15]
+Overfull \hbox (33.15596pt too wide) in paragraph at lines 263--263
 []\T2A/cmr/bx/n/17.28 Файловый ввод-вывод: де-скрип-то-ры фай-лов, функ-
  []
 
 
-Overfull \hbox (13.80716pt too wide) in paragraph at lines 199--199
+Overfull \hbox (13.80716pt too wide) in paragraph at lines 266--266
 \T2A/cmr/bx/n/17.28 ние фай-лов, ато-мар-ные опе-ра-ции, функ-ции dup()
  []
 
 
-Overfull \hbox (21.13913pt too wide) in paragraph at lines 201--201
+Overfull \hbox (21.13913pt too wide) in paragraph at lines 268--268
 []\T2A/cmr/bx/n/17.28 Файлы и ка-та-ло-ги: функ-ции stat(), fstat(), lstat(),
  []
 
 
-Overfull \hbox (6.32777pt too wide) in paragraph at lines 203--203
+Overfull \hbox (6.32777pt too wide) in paragraph at lines 270--270
 []\T2A/cmr/bx/n/17.28 Файлы и ка-та-ло-ги: функ-ции chmod(), fchmod(),
  []
 
 
-Overfull \hbox (8.56445pt too wide) in paragraph at lines 204--204
+Overfull \hbox (8.56445pt too wide) in paragraph at lines 271--271
 []\T2A/cmr/bx/n/17.28 Файлы и ка-та-ло-ги: раз-мер фай-ла, дыр-ки в фай-
  []
 
 
-Overfull \hbox (16.72696pt too wide) in paragraph at lines 204--204
+Overfull \hbox (16.72696pt too wide) in paragraph at lines 271--271
 \T2A/cmr/bx/n/17.28 лах, усе-че-ние фай-лов, фай-ло-вые си-сте-мы, функ-
  []
 
 
-Overfull \hbox (21.67648pt too wide) in paragraph at lines 205--205
+Overfull \hbox (21.67648pt too wide) in paragraph at lines 272--272
 []\T2A/cmr/bx/n/17.28 Файлы и ка-та-ло-ги: сим-во-ли-че-ские ссыл-ки, функ-
  []
 
-[12] [13]
-Overfull \vbox (73.1123pt too high) has occurred while \output is active []
-
- [14]
-Overfull \hbox (53.47897pt too wide) in paragraph at lines 208--208
+[16] [17]
+Overfull \hbox (53.47897pt too wide) in paragraph at lines 275--275
 \T2A/cmr/bx/n/17.28 чте-ние ка-та-ло-гов, функ-ции chdir(), fchdir(), getcwd(). 
  []
 
 
-Overfull \hbox (2.65396pt too wide) in paragraph at lines 210--210
+Overfull \hbox (2.65396pt too wide) in paragraph at lines 277--277
 []\T2A/cmr/bx/n/17.28 Стандартная биб-лио-те-ка ввода-вывода: от-кры-
  []
 
 
-Overfull \hbox (6.42928pt too wide) in paragraph at lines 211--211
+Overfull \hbox (6.42928pt too wide) in paragraph at lines 278--278
 []\T2A/cmr/bx/n/17.28 Стандартная биб-лио-те-ка ввода-вывода: эф-фек-
  []
 
 
-Overfull \hbox (1.0928pt too wide) in paragraph at lines 211--211
+Overfull \hbox (1.0928pt too wide) in paragraph at lines 278--278
 \T2A/cmr/bx/n/17.28 тив-ность стан-дарт-ных опе-ра-ций ввода-вывода,
  []
 
 
-Overfull \hbox (0.8975pt too wide) in paragraph at lines 212--212
+Overfull \hbox (0.8975pt too wide) in paragraph at lines 279--279
 \T2A/cmr/bx/n/17.28 ма-ти-ро-ван-ный вы-вод, фор-ма-ти-ро-ван-ный ввод,
  []
 
 
-Overfull \hbox (4.75339pt too wide) in paragraph at lines 213--213
+Overfull \hbox (4.75339pt too wide) in paragraph at lines 280--280
 []\T2A/cmr/bx/n/17.28 Управление про-цес-са-ми: иден-ти-фи-ка-то-ры про-
  []
 
 
-Overfull \hbox (5.24878pt too wide) in paragraph at lines 214--214
+Overfull \hbox (5.24878pt too wide) in paragraph at lines 281--281
 []\T2A/cmr/bx/n/17.28 Управление про-цес-са-ми: функ-ция exit(), функ-
  []
 
 
-Overfull \hbox (1.09094pt too wide) in paragraph at lines 216--216
+Overfull \hbox (1.09094pt too wide) in paragraph at lines 283--283
 []\T2A/cmr/bx/n/17.28 Управление про-цес-са-ми: из-ме-не-ние иден-ти-фи-
  []
 
 
-Overfull \hbox (30.08873pt too wide) in paragraph at lines 216--216
+Overfull \hbox (30.08873pt too wide) in paragraph at lines 283--283
 \T2A/cmr/bx/n/17.28 ка-то-ров поль-зо-ва-те-ля и груп-пы, функ-ции setuid(),
  []
 
 
-Overfull \hbox (23.37463pt too wide) in paragraph at lines 217--217
+Overfull \hbox (23.37463pt too wide) in paragraph at lines 284--284
 []\T2A/cmr/bx/n/17.28 Управление про-цес-са-ми: ин-тер-пре-ти-ру-е-мые фай-
  []
 
 
-Overfull \hbox (16.18477pt too wide) in paragraph at lines 218--218
+Overfull \hbox (16.18477pt too wide) in paragraph at lines 285--285
 []\T2A/cmr/bx/n/17.28 Сигналы: кон-цеп-ция сиг-на-лов, функ-ция signal(),
  []
 
 
-Overfull \hbox (19.3112pt too wide) in paragraph at lines 220--220
+Overfull \hbox (19.3112pt too wide) in paragraph at lines 287--287
 []\T2A/cmr/bx/n/17.28 Сигналы: функ-ции kill(), raise(), alarm(), pause(). 
  []
 
-[15]
+[18]
 Overfull \vbox (464.27544pt too high) has occurred while \output is active []
 
- [16] (/home/n1k0np/univer/sys_prog/SP-PetrSU-2020/questions.aux)
+ [19] (/home/n1k0n/univer/sys-prog/SP-PetrSU-2020/questions.aux)
 Package rerunfilecheck Info: File `questions.out' has not changed.
-(rerunfilecheck)             Checksum: 72357A0CA34120348C9595FA53345BA4;28224.
+(rerunfilecheck)             Checksum: 4D1CA7CA7CDE017934C9A5CB6380FBA7;29998.
  ) 
 Here is how much of TeX's memory you used:
- 12094 strings out of 479383
- 170606 string characters out of 5875831
- 498569 words of memory out of 5000000
- 28980 multiletter control sequences out of 15000+600000
+ 12123 strings out of 479383
+ 171112 string characters out of 5875831
+ 498578 words of memory out of 5000000
+ 28993 multiletter control sequences out of 15000+600000
  412553 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,5n,72p,1139b,538s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on /home/n1k0np/univer/sys_prog/SP-PetrSU-2020/questions.pdf (16 pages, 209221 bytes).
+ 66i,5n,72p,1138b,537s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on /home/n1k0n/univer/sys-prog/SP-PetrSU-2020/questions.pdf (19 pages, 234230 bytes).
 PDF statistics:
- 488 PDF objects out of 1000 (max. 8388607)
- 457 compressed objects within 5 object streams
- 84 named destinations out of 1000 (max. 500000)
- 534 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 574 PDF objects out of 1000 (max. 8388607)
+ 538 compressed objects within 6 object streams
+ 100 named destinations out of 1000 (max. 500000)
+ 638 words of extra memory for PDF output out of 10000 (max. 10000000)
 
