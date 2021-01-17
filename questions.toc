@@ -158,5 +158,9 @@
 \contentsline {subsection}{\numberline {29.1}Надежные сигналы. Терминология и семантика}{51}{subsection.29.1}%
 \contentsline {subsection}{\numberline {29.2}Наборы сигналов}{51}{subsection.29.2}%
 \contentsline {section}{\numberline {30}Сигналы: маска сигналов процесса и функция sigprocmask(), функция sigpending(),}{52}{section.30}%
-\contentsline {section}{\numberline {31}Сигналы: функция sigaction().}{52}{section.31}%
-\contentsline {section}{\numberline {32}Сигналы: функция sigsuspend().}{52}{section.32}%
+\contentsline {subsection}{\numberline {30.1}Маска сигналов процесса и функция sigprocmask()}{52}{subsection.30.1}%
+\contentsline {subsubsection}{\numberline {30.1.1}Маска сигналов}{52}{subsubsection.30.1.1}%
+\contentsline {subsubsection}{\numberline {30.1.2}sigprocmask()}{52}{subsubsection.30.1.2}%
+\contentsline {subsection}{\numberline {30.2}Функция sigpending}{52}{subsection.30.2}%
+\contentsline {section}{\numberline {31}Сигналы: функция sigaction().}{53}{section.31}%
+\contentsline {section}{\numberline {32}Сигналы: функция sigsuspend().}{53}{section.32}%
