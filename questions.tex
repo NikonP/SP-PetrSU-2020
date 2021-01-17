@@ -41,7 +41,8 @@
     showstringspaces=false,
     showtabs=false,                  
     tabsize=4,
-    language=C
+    language=C,
+    texcl=true
 }
 
 \definecolor{codecolor}{HTML}{A9EAE7}
@@ -527,7 +528,7 @@ int fcntl(int fd, int cmd, ... /* int arg */ );
 Функция \code{ioctl} всегда была универсальным инструментом ввода/вывода. Все, что невозможно выразить с помощью функций, описанных в этой главе, как правило, делается с помощью \code{ioctl}. Возможности этой функции чаще всего использовались в операциях терминального ввода/вывода.\\
 \begin{lstlisting}[style=CStyle]
 #include <unistd.h>    /* System V */
-#include <sys/ioctl.h> /* BSD & Linux */
+#include <sys/ioctl.h> /* BSD и Linux */
 int ioctl(int fd, int request, ...);    
 \end{lstlisting}
 \subsection{/dev/fd}
@@ -535,6 +536,41 @@ int ioctl(int fd, int request, ...);
 В некоторых системах имеются файлы \code{/dev/stdin}, \code{/dev/stdout} и \code{/dev/stderr}, эквивалентные файлам \code{/dev/fd/0}, \code{/dev/fd/1} и \code{/dev/fd/2} соответственно.
 
 \section{Файлы и каталоги: функции stat(), fstat(), lstat(), содержимое struct stat.}
+Функции \code{stat()}, \code{fstat()}, \code{lstat()} возвращают информацию об указанном файле в структуру \code{stat}. В случае успеха возвращается ноль. При ошибке возвращается -1, а переменной errno присваивается номер ошибки\\
+\begin{lstlisting}[style=CStyle]
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
+
+int stat(const char *file_name, struct stat *buf);
+int fstat(int filedes, struct stat *buf);
+int lstat(const char *file_name, struct stat *buf);    
+\end{lstlisting}
+\code{stat()} возвращает информацию о файле \code{file\_name}.\\
+\code{lstat()} идентична \code{stat()}, но в случае символьных сылок она возвращает информацию о самой ссылке, а не о файле.\\
+\code{fstat()} идентична \code{stat()}, только возвращается информация об открытом файле, на который указывает \code{filedes} (дескриптор файла).\\
+
+Структура \code{stat} содержит следующие поля:\\
+\begin{lstlisting}[style=CStyle]
+struct stat {
+    dev_t         st_dev;      // устройство
+    ino_t         st_ino;      // inode
+    mode_t        st_mode;     // режим доступа
+    nlink_t       st_nlink;    // количество жестких ссылок
+    uid_t         st_uid;      // идентификатор пользователя-владельца
+    gid_t         st_gid;      // идентификатор группы-владельца
+    dev_t         st_rdev;     // тип устройства
+                                // (если это устройство)
+    off_t         st_size;     // общий размер в байтах
+    blksize_t     st_blksize;  // размер блока ввода-вывода
+                                // в файловой системе
+    blkcnt_t      st_blocks;   // количество выделенных блоков
+    time_t        st_atime;    // время последнего доступа
+    time_t        st_mtime;    // время последней модификации
+    time_t        st_ctime;    // время последнего изменения
+};
+\end{lstlisting}
+
 \section{Файлы и каталоги: типы файлов, права доступа к файлу, функция umask().}
 \section{Файлы и каталоги: функции chmod(), fchmod(), chown(), fchown(), lchown().}
 \section{Файлы и каталоги: размер файла, дырки в файлах, усечение файлов, файловые системы, функции link(), unlink(), remove(), rename().}
