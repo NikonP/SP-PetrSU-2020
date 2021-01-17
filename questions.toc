@@ -133,14 +133,16 @@
 \contentsline {subsection}{\numberline {21.1}Идентификаторы процесса}{42}{subsection.21.1}%
 \contentsline {subsection}{\numberline {21.2}Функция fork}{42}{subsection.21.2}%
 \contentsline {subsection}{\numberline {21.3}Совместное использование файлов}{43}{subsection.21.3}%
-\contentsline {section}{\numberline {22}Управление процессами: функция exit(), функции wait() и waitpid().}{44}{section.22}%
-\contentsline {section}{\numberline {23}Управление процессами: семейство функций exec().}{44}{section.23}%
-\contentsline {section}{\numberline {24}Управление процессами: изменение идентификаторов пользователя и группы, функции setuid(), setgid(), seteuid(), setegid().}{44}{section.24}%
-\contentsline {section}{\numberline {25}Управление процессами: интерпретируемые файлы, функция system().}{44}{section.25}%
-\contentsline {section}{\numberline {26}Сигналы: концепция сигналов, функция signal(), ненадежные сигналы.}{44}{section.26}%
-\contentsline {section}{\numberline {27}Сигналы: прерванные системные вызовы, реентерабельные функции.}{44}{section.27}%
-\contentsline {section}{\numberline {28}Сигналы: функции kill(), raise(), alarm(), pause().}{44}{section.28}%
-\contentsline {section}{\numberline {29}Сигналы: надежные сигналы, терминология и семантика, наборы сигналов.}{44}{section.29}%
-\contentsline {section}{\numberline {30}Сигналы: маска сигналов процесса и функция sigprocmask(), функция sigpending(),}{44}{section.30}%
-\contentsline {section}{\numberline {31}Сигналы: функция sigaction().}{44}{section.31}%
-\contentsline {section}{\numberline {32}Сигналы: функция sigsuspend().}{44}{section.32}%
+\contentsline {section}{\numberline {22}Управление процессами: функция exit(), функции wait() и waitpid().}{43}{section.22}%
+\contentsline {subsection}{\numberline {22.1}Функции exit}{43}{subsection.22.1}%
+\contentsline {subsection}{\numberline {22.2}Функции wait и waitpid}{43}{subsection.22.2}%
+\contentsline {section}{\numberline {23}Управление процессами: семейство функций exec().}{45}{section.23}%
+\contentsline {section}{\numberline {24}Управление процессами: изменение идентификаторов пользователя и группы, функции setuid(), setgid(), seteuid(), setegid().}{45}{section.24}%
+\contentsline {section}{\numberline {25}Управление процессами: интерпретируемые файлы, функция system().}{45}{section.25}%
+\contentsline {section}{\numberline {26}Сигналы: концепция сигналов, функция signal(), ненадежные сигналы.}{45}{section.26}%
+\contentsline {section}{\numberline {27}Сигналы: прерванные системные вызовы, реентерабельные функции.}{45}{section.27}%
+\contentsline {section}{\numberline {28}Сигналы: функции kill(), raise(), alarm(), pause().}{45}{section.28}%
+\contentsline {section}{\numberline {29}Сигналы: надежные сигналы, терминология и семантика, наборы сигналов.}{45}{section.29}%
+\contentsline {section}{\numberline {30}Сигналы: маска сигналов процесса и функция sigprocmask(), функция sigpending(),}{45}{section.30}%
+\contentsline {section}{\numberline {31}Сигналы: функция sigaction().}{45}{section.31}%
+\contentsline {section}{\numberline {32}Сигналы: функция sigsuspend().}{45}{section.32}%
