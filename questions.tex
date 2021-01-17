@@ -629,6 +629,23 @@ mode_t umask(mode_t cmask);
 Аргумент \code{cmask} -- это набор констант из списка выше объеденённых при помощи ИЛИ (OR, \code{|})
 
 \section{Файлы и каталоги: функции chmod(), fchmod(), chown(), fchown(), lchown().}
+\subsection{Функции chmod, fchmod}
+Функции chmod, fchmod позволяют изменять права доступа к существующим файлам.\\
+\begin{lstlisting}[style=CStyle]
+#include <sys/stat.h>
+int chmod(const char *pathname, mode_t mode);
+int fchmod(int fd, mode_t mode);
+\end{lstlisting}
+\subsection{Функции chown, fchown, lchown}
+Функции семейства chown позволяют изменять идентификаторы пользователя и группы файла, но если в аргументе owner или group передается –1, соответствующий идентификатор не изменяется.\\
+\begin{lstlisting}[style=CStyle]
+#include <unistd.h>
+int chown(const char *pathname, uid_t owner, gid_t group);
+int fchown(int fd, uid_t owner, gid_t group);
+int lchown(const char *pathname, uid_t owner, gid_t group);    
+\end{lstlisting}
+\code{lchown} -- изменяет владельца символической ссылки, а не файла.
+
 \section{Файлы и каталоги: размер файла, дырки в файлах, усечение файлов, файловые системы, функции link(), unlink(), remove(), rename().}
 \section{Файлы и каталоги: символические ссылки, функции symlink() и readlink().}
 \newpage
