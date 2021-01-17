@@ -888,6 +888,34 @@ size_t fwrite(const void *restrict ptr, size_t size, size_t nobj, FILE *restrict
 \end{itemize}
 
 \section{Стандартная библиотека ввода-вывода: форматированный вывод, форматированный ввод, временные файлы.}
+\subsection{Форматированный ввод/вывод}
+\subsubsection{Форматированный вывод}
+Форматированный вывод производится с помощью пяти функций из семейства printf.
+\begin{lstlisting}[style=CStyle]
+#include <stdio.h>
+int printf(const char *restrict format, ...);
+int fprintf(FILE *restrict fp, const char *restrict format, ...);
+int dprintf(int fd, const char *restrict format, ...);
+int sprintf(char *restrict buf, const char *restrict format, ...);
+int snprintf(char *restrict buf, size_t n, const char *restrict format, ...);
+\end{lstlisting}
+\subsubsection{Форматированный ввод}
+Форматированный ввод выполняется с помощью трех функций из семейства scanf.
+\begin{lstlisting}[style=CStyle]
+#include <stdio.h>
+int scanf(const char *restrict format, ...);
+int fscanf(FILE *restrict fp, const char *restrict format, ...);
+int sscanf(const char *restrict buf, const char *restrict format, ...);    
+\end{lstlisting}
+\subsection{Временные файлы}
+Стандарт ISO C определяет две вспомогательные функции для создания временных файлов.
+\begin{lstlisting}[style=CStyle]
+#include <stdio.h>
+char *tmpnam(char *ptr);
+FILE *tmpfile(void);
+\end{lstlisting}
+Функция tmpnam генерирует строку с уникальным полным именем файла, не существующего в данный момент в системе. При каждом вызове эта функция генерирует неповторяющиеся имена файлов до \code{TMP\_MAX} раз. Константа \code{TMP\_MAX} определена в файле \code{<stdio.h>}.
+
 \section{Управление процессами: идентификаторы процесса, функция fork(), совместное использование файлов.}
 \section{Управление процессами: функция exit(), функции wait() и waitpid().}
 \section{Управление процессами: семейство функций exec().}
