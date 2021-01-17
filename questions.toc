@@ -141,7 +141,9 @@
 \contentsline {subsection}{\numberline {24.1} Изменение идентификаторов пользователя и группы}{45}{subsection.24.1}%
 \contentsline {subsubsection}{\numberline {24.1.1}setuid, setgid}{45}{subsubsection.24.1.1}%
 \contentsline {subsubsection}{\numberline {24.1.2}seteuid, setegid}{46}{subsubsection.24.1.2}%
-\contentsline {section}{\numberline {25}Управление процессами: интерпретируемые файлы, функция system().}{47}{section.25}%
+\contentsline {section}{\numberline {25}Управление процессами: интерпретируемые файлы, функция system().}{46}{section.25}%
+\contentsline {subsection}{\numberline {25.1}Интерпретируемые файлы}{46}{subsection.25.1}%
+\contentsline {subsection}{\numberline {25.2}Функция system}{46}{subsection.25.2}%
 \contentsline {section}{\numberline {26}Сигналы: концепция сигналов, функция signal(), ненадежные сигналы.}{47}{section.26}%
 \contentsline {section}{\numberline {27}Сигналы: прерванные системные вызовы, реентерабельные функции.}{47}{section.27}%
 \contentsline {section}{\numberline {28}Сигналы: функции kill(), raise(), alarm(), pause().}{47}{section.28}%
