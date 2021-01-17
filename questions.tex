@@ -692,6 +692,29 @@ int rename(const char *oldname, const char *newname);
 \end{lstlisting}
 
 \section{Файлы и каталоги: символические ссылки, функции symlink() и readlink().}
+\subsection{Символические ссылки}
+Символическая ссылка — это косвенная ссылка на файл в отличие от жесткой ссылки, которая является прямым указателем на индексный узел файла. Символические ссылки придуманы с целью обойти ограничения, присущие жестким ссылкам:\\
+\begin{itemize}
+    \item Жесткие ссылки обычно требуют, чтобы ссылка и файл размещались в одной файловой системе
+    \item Только суперпользователь имеет право создавать жесткие ссылки на каталоги (если это поддерживается файловой системой)
+\end{itemize}
+По сути символическая ссылка -- это буквально ссылка на путь к файлу. Например:\\
+Есть файл: \code{/home/user/code/qwe.c}\\
+Пусть символическая ссылка \code{symlink.c} на это файл размещена в \code{/home/user/somedir}, тогда путь \code{/home/user/somedir/symlink.c} ссылается на путь \code{/home/user/code/qwe.c}\\
+\subsection{symlink()}
+Символические ссылки создаются с помощью функции \code{symlink}:\\
+\begin{lstlisting}[style=CStyle]
+#include <unistd.h>
+int symlink(const char *actualpath, const char *sympath);    
+\end{lstlisting}
+\subsection{readlink()}
+Поскольку функция open следует по символическим ссылкам, нам необходим инструмент, с помощью которого можно было бы открыть саму символическую ссылку, чтобы прочитать имя файла, на который она ссылается. Эти действия выполняют функции readlink:\\
+\begin{lstlisting}[style=CStyle]
+#include <unistd.h>
+ssize_t readlink(const char *restrict pathname, char *restrict buf, size_t bufsize);    
+\end{lstlisting}
+
+
 \newpage
 \section{Файлы и каталоги: временные характеристики файлов, функция utime().}
 \section{Файлы и каталоги: функции mkdir() и rmdir(), чтение каталогов, функции chdir(), fchdir(), getcwd().}
