@@ -862,6 +862,31 @@ size_t fwrite(const void *restrict ptr, size_t size, size_t nobj, FILE *restrict
 \end{lstlisting}
 
 \section{Стандартная библиотека ввода-вывода: эффективность стандартных операций ввода-вывода, позиционирование в потоке.}
+\subsection{Эффективность стандартных функций ввода/вывода}
+Стандартная библиотека ввода/вывода не намного медленнее, чем прямое обращение к функциям read и write. В большинстве сложных приложений наибольшее количество пользовательского времени уходит на выполнение самого приложения, а не на обращения к стандартным функциям ввода/вывода. Но стандартная библиотека ввода/вывода поддерживает буферизацию.
+\subsection{Позиционирование в потоке}
+Существует три способа позиционирования в потоке ввода/вывода:
+\begin{itemize}
+    \item С помощью функций \code{ftell} и \code{fseek} -- позиция в файле представлена как long int
+    \begin{lstlisting}[style=CStyle]
+    #include <stdio.h>
+    long ftell(FILE *fp);
+    int fseek(FILE *fp, long offset, int whence);
+    \end{lstlisting}
+    \item С помощью функций \code{ftello} и \code{fseeko} -- позиция в файле представлена как off\_t
+    \begin{lstlisting}[style=CStyle]
+    #include <stdio.h>
+    off_t ftello(FILE *fp);
+    int fseeko(FILE *fp, off_t offset, int whence);
+    \end{lstlisting}
+    \item С помощью функций \code{fgetpos} и \code{fsetpos} -- позиция в файле представлена как абстрактный тип fpos\_t. Этот тип может быть увеличен настолько, насколько это необходимо для представления позиции в файле
+    \begin{lstlisting}[style=CStyle]
+    #include <stdio.h>
+    int fgetpos(FILE *restrict fp, fpos_t *restrict pos);
+    int fsetpos(FILE *fp, const fpos_t *pos);
+    \end{lstlisting}
+\end{itemize}
+
 \section{Стандартная библиотека ввода-вывода: форматированный вывод, форматированный ввод, временные файлы.}
 \section{Управление процессами: идентификаторы процесса, функция fork(), совместное использование файлов.}
 \section{Управление процессами: функция exit(), функции wait() и waitpid().}

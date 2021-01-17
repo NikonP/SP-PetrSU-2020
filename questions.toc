@@ -121,17 +121,19 @@
 \contentsline {subsubsection}{\numberline {18.4.1}Посимвольный вывод}{40}{subsubsection.18.4.1}%
 \contentsline {subsubsection}{\numberline {18.4.2}Построчный вывод}{40}{subsubsection.18.4.2}%
 \contentsline {subsubsection}{\numberline {18.4.3}Прямой вывод (двоичные данные)}{40}{subsubsection.18.4.3}%
-\contentsline {section}{\numberline {19}Стандартная библиотека ввода-вывода: эффективность стандартных операций ввода-вывода, позиционирование в потоке.}{42}{section.19}%
-\contentsline {section}{\numberline {20}Стандартная библиотека ввода-вывода: форматированный вывод, форматированный ввод, временные файлы.}{42}{section.20}%
-\contentsline {section}{\numberline {21}Управление процессами: идентификаторы процесса, функция fork(), совместное использование файлов.}{42}{section.21}%
-\contentsline {section}{\numberline {22}Управление процессами: функция exit(), функции wait() и waitpid().}{42}{section.22}%
-\contentsline {section}{\numberline {23}Управление процессами: семейство функций exec().}{42}{section.23}%
-\contentsline {section}{\numberline {24}Управление процессами: изменение идентификаторов пользователя и группы, функции setuid(), setgid(), seteuid(), setegid().}{42}{section.24}%
-\contentsline {section}{\numberline {25}Управление процессами: интерпретируемые файлы, функция system().}{42}{section.25}%
-\contentsline {section}{\numberline {26}Сигналы: концепция сигналов, функция signal(), ненадежные сигналы.}{42}{section.26}%
-\contentsline {section}{\numberline {27}Сигналы: прерванные системные вызовы, реентерабельные функции.}{42}{section.27}%
-\contentsline {section}{\numberline {28}Сигналы: функции kill(), raise(), alarm(), pause().}{42}{section.28}%
-\contentsline {section}{\numberline {29}Сигналы: надежные сигналы, терминология и семантика, наборы сигналов.}{42}{section.29}%
-\contentsline {section}{\numberline {30}Сигналы: маска сигналов процесса и функция sigprocmask(), функция sigpending(),}{42}{section.30}%
-\contentsline {section}{\numberline {31}Сигналы: функция sigaction().}{42}{section.31}%
-\contentsline {section}{\numberline {32}Сигналы: функция sigsuspend().}{42}{section.32}%
+\contentsline {section}{\numberline {19}Стандартная библиотека ввода-вывода: эффективность стандартных операций ввода-вывода, позиционирование в потоке.}{40}{section.19}%
+\contentsline {subsection}{\numberline {19.1}Эффективность стандартных функций ввода/вывода}{40}{subsection.19.1}%
+\contentsline {subsection}{\numberline {19.2}Позиционирование в потоке}{40}{subsection.19.2}%
+\contentsline {section}{\numberline {20}Стандартная библиотека ввода-вывода: форматированный вывод, форматированный ввод, временные файлы.}{43}{section.20}%
+\contentsline {section}{\numberline {21}Управление процессами: идентификаторы процесса, функция fork(), совместное использование файлов.}{43}{section.21}%
+\contentsline {section}{\numberline {22}Управление процессами: функция exit(), функции wait() и waitpid().}{43}{section.22}%
+\contentsline {section}{\numberline {23}Управление процессами: семейство функций exec().}{43}{section.23}%
+\contentsline {section}{\numberline {24}Управление процессами: изменение идентификаторов пользователя и группы, функции setuid(), setgid(), seteuid(), setegid().}{43}{section.24}%
+\contentsline {section}{\numberline {25}Управление процессами: интерпретируемые файлы, функция system().}{43}{section.25}%
+\contentsline {section}{\numberline {26}Сигналы: концепция сигналов, функция signal(), ненадежные сигналы.}{43}{section.26}%
+\contentsline {section}{\numberline {27}Сигналы: прерванные системные вызовы, реентерабельные функции.}{43}{section.27}%
+\contentsline {section}{\numberline {28}Сигналы: функции kill(), raise(), alarm(), pause().}{43}{section.28}%
+\contentsline {section}{\numberline {29}Сигналы: надежные сигналы, терминология и семантика, наборы сигналов.}{43}{section.29}%
+\contentsline {section}{\numberline {30}Сигналы: маска сигналов процесса и функция sigprocmask(), функция sigpending(),}{43}{section.30}%
+\contentsline {section}{\numberline {31}Сигналы: функция sigaction().}{43}{section.31}%
+\contentsline {section}{\numberline {32}Сигналы: функция sigsuspend().}{43}{section.32}%
