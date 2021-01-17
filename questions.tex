@@ -959,8 +959,22 @@ pid_t waitpid(pid_t pid, int *statloc, int options);
 В обеих функциях аргумент \code{statloc} является указателем на целое число. Если в аргументе передается непустой указатель, по заданному адресу будет записан код завершения дочернего процесса.\\
 Код завершения дочернего процесса обрабатывается различными макроопределениями.
 
-
 \section{Управление процессами: семейство функций exec().}
+Функция fork часто используется для создания нового процесса, который затем запускает другую программу с помощью одной из функций семейства exec.
+\begin{lstlisting}[style=CStyle]
+#include <unistd.h>
+int execl(const char *pathname, const char *arg0, ... /* (char *)0 */ );
+int execv(const char *pathname, char *const argv[]);
+int execle(const char *pathname, const char *arg0, ... /* (char *)0, char *const envp[] */ );
+int execve(const char *pathname, char *const argv[], char *const envp[]);
+int execlp(const char *filename, const char *arg0, ... /* (char *)0 */ );
+int execvp(const char *filename, char *const argv[]);
+int fexecve(int fd, char *const argv[], char *const envp[]);
+\end{lstlisting}
+Одно из отличий между этими функциями заключается в том, что первые четыре принимают полный путь к файлу, следующие две -- только имя файла и последняя -- дескриптор файла.\\
+Если функция \code{execlp} или \code{execvp} находит выполняемый файл, используя один из префиксов пути, но этот файл не является двоичным выполняемым файлом, сгенерированным редактором связей, функция предположит, что найденный файл является сценарием командной оболочки, и попытается вызывать \code{/bin/sh} с именем файла в качестве аргумента.\\
+\includegraphics[scale=0.7]{Screenshot_20210117_225811.png}\\
+
 \section{Управление процессами: изменение идентификаторов пользователя и группы, функции setuid(), setgid(), seteuid(), setegid().}
 \section{Управление процессами: интерпретируемые файлы, функция system().}
 \section{Сигналы: концепция сигналов, функция signal(), ненадежные сигналы.}
