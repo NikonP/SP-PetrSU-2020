@@ -75,7 +75,7 @@
 \contentsline {section}{\numberline {9}Файловый ввод-вывод: функции sync(), fsync(), fdatasync(), fcntl(), ioctl(), /dev/fd}{26}{section.9}%
 \contentsline {subsection}{\numberline {9.1}Функции sync, fsync и fdatasync}{26}{subsection.9.1}%
 \contentsline {subsection}{\numberline {9.2}Функция fcntl}{27}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Функция ioctl}{28}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.3}Функция ioctl}{27}{subsection.9.3}%
 \contentsline {subsection}{\numberline {9.4}/dev/fd}{28}{subsection.9.4}%
 \contentsline {section}{\numberline {10}Файлы и каталоги: функции stat(), fstat(), lstat(), содержимое struct stat.}{28}{section.10}%
 \contentsline {section}{\numberline {11}Файлы и каталоги: типы файлов, права доступа к файлу, функция umask().}{29}{section.11}%
@@ -100,7 +100,12 @@
 \contentsline {section}{\numberline {15}Файлы и каталоги: временные характеристики файлов, функция utime().}{35}{section.15}%
 \contentsline {subsection}{\numberline {15.1}Временные характеристики файлов}{35}{subsection.15.1}%
 \contentsline {subsection}{\numberline {15.2}utime()}{35}{subsection.15.2}%
-\contentsline {section}{\numberline {16}Файлы и каталоги: функции mkdir() и rmdir(), чтение каталогов, функции chdir(), fchdir(), getcwd().}{38}{section.16}%
+\contentsline {section}{\numberline {16}Файлы и каталоги: функции mkdir() и rmdir(), чтение каталогов, функции chdir(), fchdir(), getcwd().}{36}{section.16}%
+\contentsline {subsection}{\numberline {16.1}mkdir()}{36}{subsection.16.1}%
+\contentsline {subsection}{\numberline {16.2}rmdir()}{36}{subsection.16.2}%
+\contentsline {subsection}{\numberline {16.3}Чтение каталогов}{36}{subsection.16.3}%
+\contentsline {subsection}{\numberline {16.4}Рабочий каталог}{36}{subsection.16.4}%
+\contentsline {subsubsection}{\numberline {16.4.1}chdir(), fchdir()}{36}{subsubsection.16.4.1}%
 \contentsline {section}{\numberline {17}Стандартная библиотека ввода-вывода: потоки и объекты FILE, стандартные потоки ввода, вывода и сообщений об ошибках, буферизация.}{38}{section.17}%
 \contentsline {section}{\numberline {18}Стандартная библиотека ввода-вывода: открытие потока, чтение из потока и запись в поток, функции ввода, функции вывода.}{38}{section.18}%
 \contentsline {section}{\numberline {19}Стандартная библиотека ввода-вывода: эффективность стандартных операций ввода-вывода, позиционирование в потоке.}{38}{section.19}%

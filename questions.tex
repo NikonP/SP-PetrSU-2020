@@ -469,7 +469,7 @@ int main()
 \subsubsection{Добавление данных в конец файла}
 ОС UNIX выполняет операцию \code{write} атомарно (только один процесс может получить доступ), если указан флаг \code{O\_APPEND}.
 \subsubsection{Функции pread и pwrite}
-\code{pread} и \code{pwrite} -- это расширения XSI для стандарта Single UNIX Specification. Эти расширения позволяют процессам атомарно выполнять ввода/вывода.\\
+\code{pread} и \code{pwrite} -- это расширения XSI для стандарта Single UNIX Specification. Эти расширения позволяют процессам атомарно выполнять ввода/вывода.
 \begin{lstlisting}[style=CStyle]
 #include <unistd.h>
 ssize_t pread(int fd, void *buf, size_t nbytes, off_t offset);
@@ -498,7 +498,7 @@ int dup2(int fd, int fd2);
 \section{Файловый ввод-вывод: функции sync(), fsync(), fdatasync(), fcntl(), ioctl(), /dev/fd}
 \subsection{Функции sync, fsync и fdatasync}
 Традиционные реализации UNIX имеют в своем распоряжении буферный кэш, или кэш страниц, через который выполняется большинство дисковых операций ввода/вывода. При записи данных в файл они, как правило, сначала помещаются ядром в один из буферов, а затем ставятся в очередь для записи на диск в более позднее время. Этот прием называется отложенной записью.\\
-Ядро обычно записывает отложенные данные на диск, когда возникает необходимость в повторном использовании буфера. Для синхронизации файловой системы на диске и содержимого буферного кэша существуют функции \code{sync}, \code{fsync} и \code{fdatasync}:\\
+Ядро обычно записывает отложенные данные на диск, когда возникает необходимость в повторном использовании буфера. Для синхронизации файловой системы на диске и содержимого буферного кэша существуют функции \code{sync}, \code{fsync} и \code{fdatasync}:
 \begin{lstlisting}[style=CStyle]
 #include <unistd.h>
 #include <unistd.h>
@@ -525,7 +525,7 @@ int fcntl(int fd, int cmd, ... /* int arg */ );
     \item Получение/установка блокировки на отдельную запись в файле (cmd = \code{F\_GETLK}, \code{F\_SETLK} или \code{F\_SETLKW})
 \end{enumerate}
 \subsection{Функция ioctl}
-Функция \code{ioctl} всегда была универсальным инструментом ввода/вывода. Все, что невозможно выразить с помощью функций, описанных в этой главе, как правило, делается с помощью \code{ioctl}. Возможности этой функции чаще всего использовались в операциях терминального ввода/вывода.\\
+Функция \code{ioctl} всегда была универсальным инструментом ввода/вывода. Все, что невозможно выразить с помощью функций, описанных в этой главе, как правило, делается с помощью \code{ioctl}. Возможности этой функции чаще всего использовались в операциях терминального ввода/вывода.
 \begin{lstlisting}[style=CStyle]
 #include <unistd.h>    /* System V */
 #include <sys/ioctl.h> /* BSD и Linux */
@@ -536,7 +536,7 @@ int ioctl(int fd, int request, ...);
 В некоторых системах имеются файлы \code{/dev/stdin}, \code{/dev/stdout} и \code{/dev/stderr}, эквивалентные файлам \code{/dev/fd/0}, \code{/dev/fd/1} и \code{/dev/fd/2} соответственно.
 
 \section{Файлы и каталоги: функции stat(), fstat(), lstat(), содержимое struct stat.}
-Функции \code{stat()}, \code{fstat()}, \code{lstat()} возвращают информацию об указанном файле в структуру \code{stat}. В случае успеха возвращается ноль. При ошибке возвращается -1, а переменной errno присваивается номер ошибки\\
+Функции \code{stat()}, \code{fstat()}, \code{lstat()} возвращают информацию об указанном файле в структуру \code{stat}. В случае успеха возвращается ноль. При ошибке возвращается -1, а переменной errno присваивается номер ошибки
 \begin{lstlisting}[style=CStyle]
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -550,7 +550,7 @@ int lstat(const char *file_name, struct stat *buf);
 \code{lstat()} идентична \code{stat()}, но в случае символьных сылок она возвращает информацию о самой ссылке, а не о файле.\\
 \code{fstat()} идентична \code{stat()}, только возвращается информация об открытом файле, на который указывает \code{filedes} (дескриптор файла).\\
 
-Структура \code{stat} содержит следующие поля:\\
+Структура \code{stat} содержит следующие поля:
 \begin{lstlisting}[style=CStyle]
 struct stat {
     dev_t         st_dev;      // устройство
@@ -630,14 +630,14 @@ mode_t umask(mode_t cmask);
 
 \section{Файлы и каталоги: функции chmod(), fchmod(), chown(), fchown(), lchown().}
 \subsection{Функции chmod, fchmod}
-Функции chmod, fchmod позволяют изменять права доступа к существующим файлам.\\
+Функции chmod, fchmod позволяют изменять права доступа к существующим файлам.
 \begin{lstlisting}[style=CStyle]
 #include <sys/stat.h>
 int chmod(const char *pathname, mode_t mode);
 int fchmod(int fd, mode_t mode);
 \end{lstlisting}
 \subsection{Функции chown, fchown, lchown}
-Функции семейства chown позволяют изменять идентификаторы пользователя и группы файла, но если в аргументе owner или group передается –1, соответствующий идентификатор не изменяется.\\
+Функции семейства chown позволяют изменять идентификаторы пользователя и группы файла, но если в аргументе owner или group передается –1, соответствующий идентификатор не изменяется.
 \begin{lstlisting}[style=CStyle]
 #include <unistd.h>
 int chown(const char *pathname, uid_t owner, gid_t group);
@@ -658,7 +658,7 @@ int lchown(const char *pathname, uid_t owner, gid_t group);
 Чтобы узнать реальный объем занимаемый файлом на диске необходимо использовать поле \code{st\_blocks}, т.е. \code{real\_size = st\_blocks * 512}.
 \subsection{Усечение файлов}
 Иногда возникает необходимость отсечь некоторые данные, расположенные в конце файла. Усечение размера файла до нуля, которое осуществляется при использовании флага \code{O\_TRUNC} в вызове функции \code{open}, есть частный случай усечения файла.\\
-Эти две функции усекают существующий файл до размера, определяемого аргументом \code{length}:\\
+Эти две функции усекают существующий файл до размера, определяемого аргументом \code{length}:
 \begin{lstlisting}[style=CStyle]
 #include <unistd.h>
 int truncate(const char *pathname, off_t length);
@@ -668,24 +668,24 @@ int ftruncate(int fd, off_t length);
 \includegraphics[scale=0.5]{Screenshot_20210117_193251.png}
 \includegraphics[scale=0.5]{Screenshot_20210117_193352.png}
 \subsubsection{link, unlink}
-На индексный узел любого файла могут указывать несколько каталожных записей. Такие ссылки создаются с помощью функции \code{link}:\\
+На индексный узел любого файла могут указывать несколько каталожных записей. Такие ссылки создаются с помощью функции \code{link}:
 \begin{lstlisting}[style=CStyle]
 #include <unistd.h>
 int link(const char *existingpath, const char *newpath);    
 \end{lstlisting}
-Удаление записей из каталога производится с помощью функции \code{unlink}:\\
+Удаление записей из каталога производится с помощью функции \code{unlink}:
 \begin{lstlisting}[style=CStyle]
 #include <unistd.h>
 int unlink(const char *pathname);    
 \end{lstlisting}
 \subsubsection{remove}
-Удалить жесткую ссылку на файл или каталог можно также с помощью функции \code{remove}. Для файлов функция remove абсолютно идентична функции \code{unlink}, для каталогов — функции \code{rmdir}:\\
+Удалить жесткую ссылку на файл или каталог можно также с помощью функции \code{remove}. Для файлов функция remove абсолютно идентична функции \code{unlink}, для каталогов — функции \code{rmdir}:
 \begin{lstlisting}[style=CStyle]
 #include <stdio.h>
 int remove(const char *pathname);    
 \end{lstlisting}
 \subsubsection{rename}
-Для переименования файла или каталога используется функция \code{rename}:\\
+Для переименования файла или каталога используется функция \code{rename}:
 \begin{lstlisting}[style=CStyle]
 #include <stdio.h>
 int rename(const char *oldname, const char *newname);
@@ -702,13 +702,13 @@ int rename(const char *oldname, const char *newname);
 Есть файл: \code{/home/user/code/qwe.c}\\
 Пусть символическая ссылка \code{symlink.c} на это файл размещена в \code{/home/user/somedir}, тогда путь \code{/home/user/somedir/symlink.c} ссылается на путь \code{/home/user/code/qwe.c}\\
 \subsection{symlink()}
-Символические ссылки создаются с помощью функции \code{symlink}:\\
+Символические ссылки создаются с помощью функции \code{symlink}:
 \begin{lstlisting}[style=CStyle]
 #include <unistd.h>
 int symlink(const char *actualpath, const char *sympath);    
 \end{lstlisting}
 \subsection{readlink()}
-Поскольку функция open следует по символическим ссылкам, нам необходим инструмент, с помощью которого можно было бы открыть саму символическую ссылку, чтобы прочитать имя файла, на который она ссылается. Эти действия выполняют функции readlink:\\
+Поскольку функция open следует по символическим ссылкам, нам необходим инструмент, с помощью которого можно было бы открыть саму символическую ссылку, чтобы прочитать имя файла, на который она ссылается. Эти действия выполняют функции readlink:
 \begin{lstlisting}[style=CStyle]
 #include <unistd.h>
 ssize_t readlink(const char *restrict pathname, char *restrict buf, size_t bufsize);    
@@ -723,12 +723,12 @@ ssize_t readlink(const char *restrict pathname, char *restrict buf, size_t bufsi
     \item \code{st\_ctim} -- Время последнего изменения статуса индексного узла (i-node) (\code{chmod}, \code{chown})
 \end{itemize}
 \subsection{utime()}
-Функция \code{utime()} изменяет время создания (или последней модификации) файла, чье имя опре­деляется указателем \code{fname}:\\
+Функция \code{utime()} изменяет время создания (или последней модификации) файла, чье имя опре­деляется указателем \code{fname}:
 \begin{lstlisting}[style=CStyle]
 #include <utime.h>
 int utime(char *fname, struct utimbuf *t);
 \end{lstlisting}
-Новое время задается структурой, на которую указывает параметр \code{t}. Структура \code{utimbuf} определена следующим образом:\\
+Новое время задается структурой, на которую указывает параметр \code{t}. Структура \code{utimbuf} определена следующим образом:
 \begin{lstlisting}[style=CStyle]
 struct utimbuf {
     time_t actime;
@@ -737,6 +737,37 @@ struct utimbuf {
 \end{lstlisting}
 
 \section{Файлы и каталоги: функции mkdir() и rmdir(), чтение каталогов, функции chdir(), fchdir(), getcwd().}
+\subsection{mkdir()}
+Создание каталогов производится с помощью функции \code{mkdir}:
+\begin{lstlisting}[style=CStyle]
+#include <sys/stat.h>
+int mkdir(const char *pathname, mode_t mode);    
+\end{lstlisting}
+\subsection{rmdir()}
+Удаление пустого каталога производится с помощью функции \code{rmdir}. Пустым называется каталог, который содержит только две записи: <<точка>> и <<точка-точка>>
+\begin{lstlisting}[style=CStyle]
+#include <unistd.h>
+int rmdir(const char *pathname);      
+\end{lstlisting}
+\subsection{Чтение каталогов}
+Прочитать информацию из файла каталога может любой, кто имеет право на чтение этого каталога. Но только ядро может выполнять запись в каталоги, благодаря чему обеспечивается сохранность файловой системы.
+
+\subsection{Рабочий каталог}
+Для каждого процесса определен текущий рабочий каталог. Относительно этого каталога вычисляются все относительные пути (то есть пути, которые не начинаются с символа слеша)
+\subsubsection{chdir(), fchdir()}
+Процесс может изменить текущий рабочий каталог вызовом функции \code{chdir()} или \code{fchdir()}:
+\begin{lstlisting}[style=CStyle]
+#include <unistd.h>
+int chdir(const char *pathname);
+int fchdir(int fd);    
+\end{lstlisting}
+Получить текущий рабочий каталог можно при помощи функции \code{getcwd()}:
+\begin{lstlisting}[style=CStyle]
+#include <unistd.h>
+char *getcwd(char *buf, size_t size);     
+\end{lstlisting}
+Возвращает указатель на \code{buf} в случае успеха, \code{NULL} — в случае ошибки
+
 \section{Стандартная библиотека ввода-вывода: потоки и объекты FILE, стандартные потоки ввода, вывода и сообщений об ошибках, буферизация.}
 \section{Стандартная библиотека ввода-вывода: открытие потока, чтение из потока и запись в поток, функции ввода, функции вывода.}
 \section{Стандартная библиотека ввода-вывода: эффективность стандартных операций ввода-вывода, позиционирование в потоке.}
