@@ -785,8 +785,82 @@ char *getcwd(char *buf, size_t size);
     \item Отсутствие буферизации. Стандартная библиотека ввода/вывода не буферизует операции с символами
 \end{enumerate}
 
-
 \section{Стандартная библиотека ввода-вывода: открытие потока, чтение из потока и запись в поток, функции ввода, функции вывода.}
+\subsection{Открытие потока}
+Функции fopen, freopen и fdopen открывают стандартный поток ввода/вывода:
+\begin{lstlisting}[style=CStyle]
+#include <stdio.h>
+FILE *fopen(const char *restrict pathname, const char *restrict type);
+FILE *freopen(const char *restrict pathname, const char *restrict type, FILE *restrict fp);
+FILE *fdopen(int fd, const char *type);     
+\end{lstlisting}
+\begin{itemize}
+    \item Функция fopen открывает указанный файл
+    \item Функция freopen открывает указанный файл и связывает его с указанным потоком, предварительно закрывая поток, если он уже был открыт
+    \item Функция fdopen принимает открытый дескриптор файла, полученный вызовом функций open, dup, dup2, fcntl, pipe, socket, socketpair или accept,и связывает его с потоком ввода/вывода. Часто эта функция вызывается с дескриптором, который получен в результате создания канала или сетевого соединения
+\end{itemize}
+Возможные значения аргумента type при открытии потока:
+\begin{itemize}
+    \item r или rb -- Открыть для чтения
+    \item w или wb -- Усечь размер файла до 0 или создать и открыть на запись
+    \item a или ab -- Открыть для записи в конец файла или создать для записи
+    \item r+, или r+b, или rb+ -- Открыть для чтения и для записи
+    \item w+, или w+b, или wb+ -- Усечь размер файла до 0 или создать и открыть для чтения и для записи
+    \item a+, или a+b, или ab+ -- Открыть или создать для чтения и для записи в конец файла 
+\end{itemize}
+Закрывается открытый поток с помощью функции \code{fclose}:
+\begin{lstlisting}[style=CStyle]
+#include <stdio.h>
+int fclose(FILE *fp);    
+\end{lstlisting}
+\subsection{Чтение из потока и запись в поток}
+После открытия потока можно выбрать один из трех типов неформатированного ввода/вывода:
+\begin{itemize}
+    \item Посимвольный ввод/вывод
+    \item Построчный ввод/вывод
+    \item Прямой ввод/вывод
+\end{itemize}
+\subsection{Функции ввода}
+\subsubsection{Посимвольный ввод}
+Три функции позволяют читать по одному символу за одно обращение. Все три возвращают очередной символ в случае успеха, \code{EOF} — в случае ошибки:
+\begin{lstlisting}[style=CStyle]
+#include <stdio.h>
+int getc(FILE *fp);
+int fgetc(FILE *fp);
+int getchar(void);     
+\end{lstlisting}
+\subsubsection{Построчный ввод}
+\begin{lstlisting}[style=CStyle]
+#include <stdio.h>
+char *fgets(char *restrict buf, int n, FILE *restrict fp);
+char *gets(char *buf);    
+\end{lstlisting}
+\subsubsection{Прямой ввод (двоичные данные)}
+Функции прямого ввода/вывода используются для работы с двоичными данными, т.к. они не обрабатывает нулевые байты и спецсимволы как строки.\\
+\begin{lstlisting}[style=CStyle]
+#include <stdio.h>
+size_t fread(void *restrict ptr, size_t size, size_t nobj, FILE *restrict fp);        
+\end{lstlisting}
+\subsection{Функции вывода}
+\subsubsection{Посимвольный вывод}
+\begin{lstlisting}[style=CStyle]
+#include <stdio.h>
+int putc(int c, FILE *fp);
+int fputc(int c, FILE *fp);
+int putchar(int c);    
+\end{lstlisting}
+\subsubsection{Построчный вывод}
+\begin{lstlisting}[style=CStyle]
+#include <stdio.h>
+int fputs(const char *restrict str, FILE *restrict fp);
+int puts(const char *str);    
+\end{lstlisting}
+\subsubsection{Прямой вывод (двоичные данные)}
+\begin{lstlisting}[style=CStyle]
+#include <stdio.h>
+size_t fwrite(const void *restrict ptr, size_t size, size_t nobj, FILE *restrict fp);
+\end{lstlisting}
+
 \section{Стандартная библиотека ввода-вывода: эффективность стандартных операций ввода-вывода, позиционирование в потоке.}
 \section{Стандартная библиотека ввода-вывода: форматированный вывод, форматированный ввод, временные файлы.}
 \section{Управление процессами: идентификаторы процесса, функция fork(), совместное использование файлов.}
