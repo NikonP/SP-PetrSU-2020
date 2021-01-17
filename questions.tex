@@ -714,9 +714,28 @@ int symlink(const char *actualpath, const char *sympath);
 ssize_t readlink(const char *restrict pathname, char *restrict buf, size_t bufsize);    
 \end{lstlisting}
 
-
-\newpage
 \section{Файлы и каталоги: временные характеристики файлов, функция utime().}
+\subsection{Временные характеристики файлов}
+Поля структуры \code{stat}:\\
+\begin{itemize}
+    \item \code{st\_atim} -- Время последнего доступа к содержимому файла (\code{read})
+    \item \code{st\_mtim} -- Время последнего изменения содержимого файла (\code{write})
+    \item \code{st\_ctim} -- Время последнего изменения статуса индексного узла (i-node) (\code{chmod}, \code{chown})
+\end{itemize}
+\subsection{utime()}
+Функция \code{utime()} изменяет время создания (или последней модификации) файла, чье имя опре­деляется указателем \code{fname}:\\
+\begin{lstlisting}[style=CStyle]
+#include <utime.h>
+int utime(char *fname, struct utimbuf *t);
+\end{lstlisting}
+Новое время задается структурой, на которую указывает параметр \code{t}. Структура \code{utimbuf} определена следующим образом:\\
+\begin{lstlisting}[style=CStyle]
+struct utimbuf {
+    time_t actime;
+    time_t modtime;
+}
+\end{lstlisting}
+
 \section{Файлы и каталоги: функции mkdir() и rmdir(), чтение каталогов, функции chdir(), fchdir(), getcwd().}
 \section{Стандартная библиотека ввода-вывода: потоки и объекты FILE, стандартные потоки ввода, вывода и сообщений об ошибках, буферизация.}
 \section{Стандартная библиотека ввода-вывода: открытие потока, чтение из потока и запись в поток, функции ввода, функции вывода.}
