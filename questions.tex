@@ -647,6 +647,50 @@ int lchown(const char *pathname, uid_t owner, gid_t group);
 \code{lchown} -- изменяет владельца символической ссылки, а не файла.
 
 \section{Файлы и каталоги: размер файла, дырки в файлах, усечение файлов, файловые системы, функции link(), unlink(), remove(), rename().}
+\subsection{Размер файла}
+Поле \code{st\_size} структуры stat содержит размер файла в байтах.\\
+Обычные файлы могут иметь размер, равный нулю. В этом случае первая же операция чтения вернет признак конца файла. Для каталогов размер файла обычно кратен некоторому числу, такому как 16 или 512.\\
+Поле \code{st\_blocks} определяет фактическое количество 512-байтных блоков, занимаемых файлом.
+\subsection{Дырки в файлах}
+Обычные файлы могут содержать <<дырки>>. Дырки создаются
+в результате переноса текущей позиции за пределы файла и последующей записи некоторых данных.\\
+Если скопировать файл c <<дырками>>, например, с помощью утилиты \code{cat}, дырки будут скопированы как обычные байты данных со значением 0.\\
+Чтобы узнать реальный объем занимаемый файлом на диске необходимо использовать поле \code{st\_blocks}, т.е. \code{real\_size = st\_blocks * 512}.
+\subsection{Усечение файлов}
+Иногда возникает необходимость отсечь некоторые данные, расположенные в конце файла. Усечение размера файла до нуля, которое осуществляется при использовании флага \code{O\_TRUNC} в вызове функции \code{open}, есть частный случай усечения файла.\\
+Эти две функции усекают существующий файл до размера, определяемого аргументом \code{length}:\\
+\begin{lstlisting}[style=CStyle]
+#include <unistd.h>
+int truncate(const char *pathname, off_t length);
+int ftruncate(int fd, off_t length);       
+\end{lstlisting}
+\subsection{Файловые системы}
+\includegraphics[scale=0.5]{Screenshot_20210117_193251.png}
+\includegraphics[scale=0.5]{Screenshot_20210117_193352.png}
+\subsubsection{link, unlink}
+На индексный узел любого файла могут указывать несколько каталожных записей. Такие ссылки создаются с помощью функции \code{link}:\\
+\begin{lstlisting}[style=CStyle]
+#include <unistd.h>
+int link(const char *existingpath, const char *newpath);    
+\end{lstlisting}
+Удаление записей из каталога производится с помощью функции \code{unlink}:\\
+\begin{lstlisting}[style=CStyle]
+#include <unistd.h>
+int unlink(const char *pathname);    
+\end{lstlisting}
+\subsubsection{remove}
+Удалить жесткую ссылку на файл или каталог можно также с помощью функции \code{remove}. Для файлов функция remove абсолютно идентична функции \code{unlink}, для каталогов — функции \code{rmdir}:\\
+\begin{lstlisting}[style=CStyle]
+#include <stdio.h>
+int remove(const char *pathname);    
+\end{lstlisting}
+\subsubsection{rename}
+Для переименования файла или каталога используется функция \code{rename}:\\
+\begin{lstlisting}[style=CStyle]
+#include <stdio.h>
+int rename(const char *oldname, const char *newname);
+\end{lstlisting}
+
 \section{Файлы и каталоги: символические ссылки, функции symlink() и readlink().}
 \newpage
 \section{Файлы и каталоги: временные характеристики файлов, функция utime().}
