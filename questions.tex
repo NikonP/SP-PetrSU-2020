@@ -1127,5 +1127,30 @@ int sigpending(sigset_t *set);
 \end{lstlisting}
 
 \section{Сигналы: функция sigaction().}
+Функция sigaction позволяет проверить действие, связанное с определенным сигналом, изменить его или выполнить обе эти операции. Эта функция служит заменой функции signal из ранних версий UNIX.
+\begin{lstlisting}[style=CStyle]
+#include <signal.h>
+int sigaction(int signo, const struct sigaction *restrict act, struct sigaction *restrict oact);
+\end{lstlisting}
+Через аргумент signo передается номер сигнала, диспозицию которого требуется получить или изменить. Если в аргументе act передается непустой указатель, диспозиция сигнала изменяется. Если в аргументе oact передается непустой указатель, функция возвращает предыдущее значение диспозиции сигнала, помещая его по указанному в oact адресу.\\
+Структура sigaction:
+\begin{lstlisting}[style=CStyle]
+struct sigaction {
+    void (*sa_handler)(int); // адрес функции — обработчика сигнала,
+                             // или SIG\_IGN, или SIG\_DFL
+    sigset_t sa_mask;        // дополнительные блокируемые сигналы
+    int sa_flags;            // флаги
+
+    //  альтернативный обработчик сигнала
+    void (*sa_sigaction)(int, siginfo_t *, void *); 
+}
+\end{lstlisting}
+Если при изменении диспозиции сигнала поле sa\_handler содержит адрес функции-обработчика (а не константы SIG\_IGN или SIG\_DEL), поле sa\_mask определяет набор сигналов, которые будут добавлены к маске сигналов процесса перед вызовом функции-обработчика.
+
 \section{Сигналы: функция sigsuspend().}
+\code{sigsuspend} временно блокирует сигнал. Если процессу придёт времеено заблокированный сигнал, то он будет <<висеть в очереди>> пока процесс не разблокирует его:
+\begin{lstlisting}[style=CStyle]
+#include <signal.h>
+int sigsuspend(const sigset_t *sigmask);
+\end{lstlisting}
 \end{document} 
